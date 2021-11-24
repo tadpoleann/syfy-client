@@ -42,5 +42,4 @@ export class UserRegistrationFormComponent implements OnInit {
       });
     });
   }
-
 }
