@@ -49,10 +49,10 @@ export class MovieCardComponent {
     });
   }
   
-  getMovieSynopsis(Description: string, Title: string):void{
+  getMovieSynopsis(Description: string, Title: string, TrailerUrl: string):void{
     this.dialog.open(MovieSynopsisComponent, {
-      data: {Description, Title},
-      width: '450px',
+      data: {Description, Title, TrailerUrl},
+      width: '500px',
     });
   }
 

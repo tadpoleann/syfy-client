@@ -5,8 +5,9 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { YouTubePlayerModule } from "@angular/youtube-player"
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from "@angular/router";
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     MatIconModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    YouTubePlayerModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

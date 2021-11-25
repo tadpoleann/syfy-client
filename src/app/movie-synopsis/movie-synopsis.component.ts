@@ -13,6 +13,7 @@ export class MovieSynopsisComponent{
     public data: {
       Title: string;
       Description: string;
+      TrailerUrl: string;
     }
   ) { }
 
