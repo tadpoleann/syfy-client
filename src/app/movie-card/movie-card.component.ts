@@ -19,15 +19,18 @@ export class MovieCardComponent {
     public snackBar: MatSnackBar
   ) { }
 
-ngOnInit(): void {
-  this.getMovies();
-}
+  ngOnInit(): void {
+    this.getMovies();
+  }
 
-getMovies(): void {
-  this.fetchApiData.getAllMovies().subscribe((resp: any) => { //fetch all movies from api
+  getMovies(): void {
+    this.fetchApiData.getAllMovies().subscribe((resp: any) => { //fetch all movies from api
       this.movies = resp;
       console.log(this.movies);
       return this.movies;
     });
   }
+
+  
+
 }

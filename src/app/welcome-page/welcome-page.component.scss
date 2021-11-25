@@ -1,0 +1,106 @@
+.main-page{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    h3{
+        color:aliceblue;
+        margin:2rem;
+    }
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+$bg_body: #212121; 
+$bg_gradient: linear-gradient(90deg, rgba(0, 126, 143,1) 0%, rgba(172, 179, 0,1) 87%, rgba(155, 161, 0,1) 99%);
+
+.btn{
+    display: block;
+    padding: 14px 16px;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.btn-cube {
+    position: relative;
+    .bg-top {
+        position: absolute;
+        height: 10px;
+        background: rgb(172, 179, 0);
+        background: $bg_gradient;
+        bottom: 100%;
+        left: 5px;
+        right: -5px;
+        transform: skew(-45deg, 0);
+        margin: 0;
+        .bg-inner{
+            bottom: 0;
+        }
+    }
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(172, 179, 0);
+    background: $bg_gradient;
+  }
+  .bg-right {
+    position: absolute;
+    background: rgb(172, 179, 0);
+    background: rgba(242, 255, 176,1);
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+    .bg-inner {
+      left: 0;
+    }
+  }
+  .bg {
+    .bg-inner {
+      transition: all 0.15s ease;
+    }
+  }
+  .bg-inner {
+    background: $bg_body;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+  }
+  .text {
+    position: relative;
+    z-index: 2;
+  }  
+
+  &.btn-cube-hover-left:focus,
+  &.btn-cube-hover-left:hover {
+    .bg {
+      .bg-inner {
+        left: 100%;
+      }
+    }
+  }
+
+  &.btn-cube-hover-right:focus,
+  &.btn-cube-hover-right:hover {
+    .bg {
+      .bg-inner {
+        right: 100%;
+      }
+    }
+  }
+}
