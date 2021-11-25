@@ -1,31 +1,29 @@
+$fallbackColor: rgb(172, 179, 0);
+$bodyColor: #212121; 
+$bg_gradient: linear-gradient(90deg, rgba(0, 126, 143,1) 0%, rgba(172, 179, 0,1) 87%, rgba(155, 161, 0,1) 99%);
+
 .main-page{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    height: 100vh;
-    h3{
-        color:aliceblue;
-        margin:2rem;
-    }
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  h3{
+      color:aliceblue;
+      margin:2rem;
+  }
 }
 
 button:hover{
-    cursor:pointer;
+  cursor:pointer;
 }
-
-$bg_body: #212121; 
-$bg_gradient: linear-gradient(90deg, rgba(0, 126, 143,1) 0%, rgba(172, 179, 0,1) 87%, rgba(155, 161, 0,1) 99%);
 
 .btn{
     display: block;
-    padding: 14px 16px;
-    background: transparent;
-    outline: none;
+    padding: 1.5rem 2rem;
     border: 0;
-    color: #fff;
-    letter-spacing: 0.1em;
+    color: aliceblue;
+    letter-spacing: 0.05rem;
     font-weight: bold;
-    font-family: monospace;
     font-size: 16px;
 }
 
@@ -34,7 +32,7 @@ $bg_gradient: linear-gradient(90deg, rgba(0, 126, 143,1) 0%, rgba(172, 179, 0,1)
     .bg-top {
         position: absolute;
         height: 10px;
-        background: rgb(172, 179, 0);
+        background: $fallbackColor;
         background: $bg_gradient;
         bottom: 100%;
         left: 5px;
@@ -51,12 +49,12 @@ $bg_gradient: linear-gradient(90deg, rgba(0, 126, 143,1) 0%, rgba(172, 179, 0,1)
     top: 0;
     right: 0;
     bottom: 0;
-    background: rgb(172, 179, 0);
+    background: $fallbackColor;
     background: $bg_gradient;
   }
   .bg-right {
     position: absolute;
-    background: rgb(172, 179, 0);
+    background: $fallbackColor;
     background: rgba(242, 255, 176,1);
     top: -5px;
     z-index: 0;
@@ -70,11 +68,11 @@ $bg_gradient: linear-gradient(90deg, rgba(0, 126, 143,1) 0%, rgba(172, 179, 0,1)
   }
   .bg {
     .bg-inner {
-      transition: all 0.15s ease;
+      transition: all 0.25s ease;
     }
   }
   .bg-inner {
-    background: $bg_body;
+    background: $bodyColor;
     position: absolute;
     left: 2px;
     top: 2px;
