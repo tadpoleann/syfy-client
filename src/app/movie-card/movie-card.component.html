@@ -7,6 +7,7 @@
         <img src={{movie.Image}} alt= {{movie.Title}} />
         <mat-card-actions>
             <button
+                (click) = "getGenreDetails(movie.Genre.Name, movie.Genre.Description)"
                 mat-button
                 color="primary"
             >

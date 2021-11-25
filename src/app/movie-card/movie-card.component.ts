@@ -4,6 +4,8 @@ import { UserRegistrationService } from '../fetch-api-data.service'
 //angular material
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+//components
+import { MovieGenreComponent } from '../movie-genre/movie-genre.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -31,6 +33,10 @@ export class MovieCardComponent {
     });
   }
 
-  
+  getGenreDetails(Name: string, Description: string):void{
+    this.dialog.open(MovieGenreComponent, {
+      data: { Name, Description },
+    });
+  }  
 
 }
