@@ -12,6 +12,7 @@ $yellowColor:#cfcf00;
 *{
     box-sizing:border-box;
 }
+
 .mat-card {
     background-color:rgba(15, 15, 15,1);
     margin: 0.7rem;
@@ -37,11 +38,11 @@ $yellowColor:#cfcf00;
         color: aliceblue;
         position: relative;
         z-index: 2;
-        -webkit-transition: all 0.9s ease-in;
-        -moz-transition: all 0.9s ease-in;
-        -ms-transition: all 0.9s ease-in;
-        -o-transition: all 0.9s ease-in;
-        transition: all 0.9s ease-in;
+        -webkit-transition: all 0.7s ease-in;
+        -moz-transition: all 0.7s ease-in;
+        -ms-transition: all 0.7s ease-in;
+        -o-transition: all 0.7s ease-in;
+        transition: all 0.7s ease-in;
         overflow: hidden;
 
         &:after {

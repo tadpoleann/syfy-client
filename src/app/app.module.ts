@@ -10,6 +10,7 @@ import { YouTubePlayerModule } from "@angular/youtube-player"
 import { RouterModule, Routes } from "@angular/router";
 
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'; //for api requests
 import { MatInputModule } from '@angular/material/input';
@@ -20,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -60,6 +62,7 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatSnackBarModule,
     YouTubePlayerModule,
+    CommonModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],

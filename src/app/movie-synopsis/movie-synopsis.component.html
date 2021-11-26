@@ -2,18 +2,16 @@
     <h1>
       {{ data.Title }}
     </h1>
-
-    <youtube-player
-      videoId = "{{ data.TrailerUrl }}"
-      suggestedQuality = "highres"
-      [height] = "250"
-      [width] = "450"
-    >
-    </youtube-player>
-  
+    <div class = "trailer">
+      <youtube-player
+        videoId = "{{ data.TrailerUrl }}"
+        suggestedQuality = "highres"
+        [height] = "250"
+        [width] = "450"
+      >
+      </youtube-player>
+    </div>
     <div class="details">
-      <p>
         {{ data.Description }}
-      </p>
     </div>
 </div>

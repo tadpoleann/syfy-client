@@ -1,4 +1,4 @@
-<div class="movie-container">
+<div class="movie-container" [ngStyle]="{backgroundImage: 'url(../assets/spaceBG.jpg)'}">
     <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
         <mat-card-header>
             <mat-card-title>{{movie.Title}}</mat-card-title>

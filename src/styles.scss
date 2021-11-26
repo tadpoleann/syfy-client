@@ -37,3 +37,13 @@ $syfy-client-theme: mat.define-light-theme((
 *{margin: 0; padding: 0; box-sizing: border-box;}
 html, body { height: 100%; width:100%; background-color: #1a1a18;}
 body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-dialog-container {
+  padding: 0px 0px 0px 0px !important;
+  // overflow: hidden !important;
+}
+.card{
+  background-color:rgb(25,25,23);
+  color:aliceblue;
+  padding:25px;
+  letter-spacing: 0.03rem;
+}
