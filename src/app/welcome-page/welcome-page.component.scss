@@ -34,13 +34,6 @@ button:hover {
 
 .btn-cube {
   position: relative;
-  .bg-top {
-    background: $fallbackColor;
-    background: $bg_gradient;
-    .bg-inner {
-      bottom: 0;
-    }
-  }
   .bg {
     position: absolute;
     left: 0;
@@ -50,7 +43,8 @@ button:hover {
     background: $fallbackColor;
     background: $bg_gradient;
   }
-  .bg-right {
+  .bg-right,
+  .bg-left {
     background: $fallbackColor;
     background: #58595b;
     .bg-inner {
@@ -59,7 +53,7 @@ button:hover {
   }
   .bg {
     .bg-inner {
-      transition: all 0.5s ease;
+      transition: all 0.3s ease-in-out;
     }
   }
   .bg-inner {
@@ -75,8 +69,16 @@ button:hover {
     z-index: 2;
   }
 
-  &.btn-cube-hover-left:focus,
-  &.btn-cube-hover-left:hover {
+  &.btn-cube-hover:focus,
+  &.btn-cube-hover:hover {
+    .bg {
+      .bg-inner {
+        right: 100%;
+      }
+    }
+    .bg-left {
+      transform: skew(0, 45deg);
+    }
     .bg {
       .bg-inner {
         left: 100%;
@@ -84,18 +86,6 @@ button:hover {
     }
     .bg-right {
       transform: skew(0, -45deg);
-    }
-  }
-
-  &.btn-cube-hover-right:focus,
-  &.btn-cube-hover-right:hover {
-    .bg {
-      .bg-inner {
-        right: 100%;
-      }
-    }
-    .bg-right {
-      transform: skew(0, 45deg);
     }
   }
 }
