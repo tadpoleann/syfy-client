@@ -4,9 +4,6 @@ import { UserRegistrationFormComponent } from '../user-registration-form/user-re
 import { UserLoginFormComponent } from '../user-login-form/user-login-form.component';
 import { MatDialog } from '@angular/material/dialog';
 
-// testing
-declare function test1(): void;
-// declare function poop(): void;
 declare function Animate(): void; 
 
 @Component({
@@ -17,7 +14,6 @@ declare function Animate(): void;
 export class WelcomePageComponent implements OnInit {
   constructor(public dialog: MatDialog) {
     setInterval("Animate()", 400);
-    test1();
   }
 
   ngOnInit(){
