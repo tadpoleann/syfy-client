@@ -5,7 +5,8 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { YouTubePlayerModule } from "@angular/youtube-player"
+import { YouTubePlayerModule } from "@angular/youtube-player";
+import { AngularSvgIconModule } from "angular-svg-icon";
 
 import { RouterModule, Routes } from "@angular/router";
 
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+  { path: 'profile', component: UserProfileComponent},
 ]
 
 @NgModule({
@@ -64,6 +66,7 @@ const appRoutes: Routes = [
     YouTubePlayerModule,
     CommonModule,
     RouterModule.forRoot(appRoutes),
+    AngularSvgIconModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

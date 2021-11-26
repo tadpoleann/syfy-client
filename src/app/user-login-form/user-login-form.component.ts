@@ -28,10 +28,10 @@ export class UserLoginFormComponent implements OnInit {
       // close when user successfully logins
       this.dialogRef.close();
       // username and pw
-      localStorage.setItem('username', response.user.Username);
+      localStorage.setItem('username', this.userData.Username);
       localStorage.setItem('token', response.token);
-      // Will most likely reditrect but for now can leave a note
-      this.snackBar.open(response, 'Welcome back!', {
+      // ..
+      this.snackBar.open('Welcome back!', this.userData.Username, {
         duration: 3000
       });
       this.router.navigate(['movies']);
