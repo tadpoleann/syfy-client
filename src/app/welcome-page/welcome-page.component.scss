@@ -1,47 +1,45 @@
-$fallbackColor: rgb(172, 179, 0);
-$bodyColor: #212121; 
-$bg_gradient: linear-gradient(90deg, rgba(0, 126, 143,1) 0%, rgba(172, 179, 0,1) 87%, rgba(155, 161, 0,1) 99%);
+$fallbackColor: rgb(41, 92, 127);
+$bodyColor: #212121;
+$bg_gradient: linear-gradient(
+  90deg,
+  rgba(0, 126, 143, 1) 0%,
+  rgba(172, 179, 0, 1) 87%,
+  rgba(155, 161, 0, 1) 99%
+);
 
-.main-page{
-  display:flex;
+.main-page {
+  display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   height: 100vh;
-  h3{
-      color:aliceblue;
-      margin:2rem;
+  h3 {
+    color: aliceblue;
+    margin: 2rem;
   }
 }
 
-button:hover{
-  cursor:pointer;
+button:hover {
+  cursor: pointer;
 }
 
-.btn{
-    display: block;
-    padding: 1.5rem 2rem;
-    border: 0;
-    color: aliceblue;
-    letter-spacing: 0.05rem;
-    font-weight: bold;
-    font-size: 16px;
+.btn {
+  display: block;
+  padding: 1.5rem 2rem;
+  border: 0;
+  color: aliceblue;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .btn-cube {
   position: relative;
   .bg-top {
-      position: absolute;
-      height: 75px;
-      background: $fallbackColor;
-      background: $bg_gradient;
-      bottom: 100%;
-      left: 37.5px;
-      right: -37.5px;
-      transform: skew(-45deg, 0);
-      margin: 0;
-      .bg-inner{
-          bottom: 0;
-      }
+    background: $fallbackColor;
+    background: $bg_gradient;
+    .bg-inner {
+      bottom: 0;
+    }
   }
   .bg {
     position: absolute;
@@ -53,15 +51,8 @@ button:hover{
     background: $bg_gradient;
   }
   .bg-right {
-    position: absolute;
     background: $fallbackColor;
-    background: rgba(242, 255, 176,1);
-    top: -37.5px;
-    z-index: 0;
-    bottom: 37.5px;
-    width: 75px;
-    left: 100%;
-    transform: skew(0, -45deg);
+    background: #58595b;
     .bg-inner {
       left: 0;
     }
@@ -92,14 +83,7 @@ button:hover{
       }
     }
     .bg-right {
-      width: 50px;
-      top: -25px;
-      bottom: 25px;
-    }
-    .bg-top {
-      height: 50px;
-      left: 25px;
-      right: -25px;
+      transform: skew(0, -45deg);
     }
   }
 
@@ -111,18 +95,11 @@ button:hover{
       }
     }
     .bg-right {
-      width: 50px;
-      top: -25px;
-      bottom: 25px;
-    }
-    .bg-top {
-      height: 50px;
-      left: 25px;
-      right: -25px;
+      transform: skew(0, 45deg);
     }
   }
 }
 
-#logo{
+#logo {
   width: 500px;
 }
