@@ -15,7 +15,6 @@ export class WelcomePageComponent implements OnInit {
   constructor(public dialog: MatDialog) {
     setInterval("Animate()", 400);
   }
-
   ngOnInit(){
   }
   openUserRegistrationDialog(): void {
