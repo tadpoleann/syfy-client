@@ -50,7 +50,6 @@ const appRoutes: Routes = [
     MovieDirectorComponent,
     MovieSynopsisComponent,
     NavBarComponent,
-    // UserLoginFormComponent
   ],
   imports: [
     BrowserModule,
