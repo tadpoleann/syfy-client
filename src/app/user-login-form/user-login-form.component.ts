@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-login-form.component.scss']
 })
 export class UserLoginFormComponent implements OnInit {
+  isLoading = false;
 
   @Input() userData = { Username: '', Password: ''}
 
@@ -24,12 +25,14 @@ export class UserLoginFormComponent implements OnInit {
   }
 
   userLogin(): void {
+    this.isLoading = true;
     this.fetchApiData.userLogin(this.userData).subscribe((response) => {
       // close when user successfully logins
       this.dialogRef.close();
       // username and pw
       localStorage.setItem('username', this.userData.Username);
       localStorage.setItem('token', response.token);
+      this.isLoading = false;
       // ..
       this.snackBar.open('Welcome back!', this.userData.Username, {
         duration: 3000

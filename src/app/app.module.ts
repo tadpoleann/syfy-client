@@ -21,8 +21,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+import { FormsModule } from '@angular/forms';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -66,6 +67,7 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     YouTubePlayerModule,
     CommonModule,
+    MatProgressSpinnerModule,
     RouterModule.forRoot(appRoutes),
     AngularSvgIconModule.forRoot()
   ],

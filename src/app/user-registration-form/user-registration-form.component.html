@@ -49,5 +49,6 @@
     <button mat-raised-button (click)="registerUser()" color="btnColor">
       Sign Up
     </button>
+    <mat-spinner *ngIf="isLoading" class="spinner" diameter="30"></mat-spinner>
   </mat-card-actions>
 </mat-card>
