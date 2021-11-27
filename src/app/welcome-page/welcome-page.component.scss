@@ -53,7 +53,7 @@ button:hover {
   }
   .bg {
     .bg-inner {
-      transition: all 0.3s ease-in-out;
+      transition: all 0.45s ease-in-out;
     }
   }
   .bg-inner {
@@ -77,7 +77,7 @@ button:hover {
       }
     }
     .bg-left {
-      transform: skew(0, 45deg);
+      transform: skew(45deg, 0);
     }
     .bg {
       .bg-inner {
@@ -85,7 +85,7 @@ button:hover {
       }
     }
     .bg-right {
-      transform: skew(0, -45deg);
+      transform: skew(-45deg, 0);
     }
   }
 }

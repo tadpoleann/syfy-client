@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,21 +11,23 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$syfy-client-primary: mat.define-palette(mat.$yellow-palette, 500);
+$syfy-client-primary: mat.define-palette(mat.$cyan-palette, A200);
 $syfy-client-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$syfy-client-warn: mat.define-palette(mat.$teal-palette, 200);
+$syfy-client-warn: mat.define-palette(mat.$red-palette, A200);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$syfy-client-theme: mat.define-dark-theme((
-  color: (
-    primary: $syfy-client-primary,
-    accent: $syfy-client-accent,
-    warn: $syfy-client-warn,
+$syfy-client-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $syfy-client-primary,
+      accent: $syfy-client-accent,
+      warn: $syfy-client-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -34,16 +35,54 @@ $syfy-client-theme: mat.define-dark-theme((
 @include mat.all-component-themes($syfy-client-theme);
 
 /* You can add global styles to this file, and also import other style files */
-*{margin: 0; padding: 0; box-sizing: border-box;}
-html, body { height: 100%; width:100%; background-color: #1a1a18;}
-body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1a1a18;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 mat-dialog-container {
   padding: 0px 0px 0px 0px !important;
   // overflow: hidden !important;
 }
-.card{
-  background-color:rgb(25,25,23);
-  color:aliceblue;
-  padding:25px;
+.card {
+  background-color: rgb(25, 25, 23);
+  color: aliceblue;
+  padding: 25px;
   letter-spacing: 0.03rem;
+}
+// login and registration popup form
+.mat-card {
+  text-align: center;
+  background-color: #2e2e29;
+}
+.mat-card-header-text {
+  mat-card-title {
+    text-align: center;
+    margin-bottom: 1rem !important;
+  }
+}
+.mat-form-field-wrapper {
+  padding-bottom: 1rem !important;
+}
+.mat-card-actions {
+  padding-top: 0 !important;
+}
+.mat-btnColor {
+  background: linear-gradient(
+    90deg,
+    rgb(0, 69, 80) 0%,
+    rgb(125, 128, 7) 87%,
+    rgb(125, 129, 0) 99%
+  );
+  box-shadow: 4px 4px 5px 0px #1b1b18;
+  color: aliceblue;
 }
