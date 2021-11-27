@@ -11,6 +11,7 @@ $bg_gradient: linear-gradient(
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction:row;
   height: 100vh;
   h3 {
     color: aliceblue;
@@ -24,6 +25,7 @@ button:hover {
 
 .btn {
   display: block;
+  margin:0 -3rem;
   padding: 1.5rem 2rem;
   border: 0;
   color: aliceblue;
@@ -93,3 +95,16 @@ button:hover {
 #logo {
   width: 500px;
 }
+
+@media (max-width: 650px){
+  .main-page{
+    flex-direction: column;
+  }
+  #logo{
+    width:250px;
+  }
+  .btn{
+    padding: 1.25rem 1.75rem;
+  }
+}
+

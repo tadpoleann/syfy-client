@@ -13,4 +13,11 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logOut(): void{
+    this.snackbar.open('Successfully logged out', 'OK', {
+      duration:3000
+    })
+    localStorage.clear();
+  }
+
 }
