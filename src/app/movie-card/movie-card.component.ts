@@ -49,9 +49,9 @@ export class MovieCardComponent {
     });
   }
   
-  getMovieSynopsis(Description: string, Title: string, TrailerUrl: string):void{
+  getMovieSynopsis(Description: string, Title: string, TrailerUrl: string, ReleaseYear: number):void{
     this.dialog.open(MovieSynopsisComponent, {
-      data: {Description, Title, TrailerUrl},
+      data: {Description, Title, TrailerUrl, ReleaseYear},
       width: '500px',
     });
   }

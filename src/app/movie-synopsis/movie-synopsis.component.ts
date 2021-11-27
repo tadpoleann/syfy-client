@@ -14,6 +14,7 @@ export class MovieSynopsisComponent{
       Title: string;
       Description: string;
       TrailerUrl: string;
+      ReleaseYear: number;
     }
   ) { }
 
