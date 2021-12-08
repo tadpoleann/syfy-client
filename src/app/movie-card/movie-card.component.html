@@ -1,36 +1,75 @@
 <app-nav-bar></app-nav-bar>
-<div class="movie-container" [ngStyle]="{backgroundImage: 'url(../assets/spaceBG.jpg)'}">
-    <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
-        <mat-card-header>
-            <mat-card-title>{{movie.Title}}</mat-card-title>
-            <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
-        </mat-card-header>
-        <div class = "img-container">
-            <img src={{movie.Image}} alt= {{movie.Title}} />        
+<div
+  class="movie-container"
+  [ngStyle]="{ backgroundImage: 'url(../assets/spaceBG.jpg)' }"
+>
+  <mat-card *ngFor="let movie of movies" style="flex: 1 1 auto">
+    <ng-container
+      *ngIf="
+        this.favMovies.includes(movie._id);
+        then favoritedMovie;
+        else addToFav
+      "
+    ></ng-container>
+    <mat-card-header>
+      <mat-card-title>{{ movie.Title }}</mat-card-title>
+      <mat-card-subtitle
+        >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <div class="img-container">
+      <img src="{{ movie.Image }}" alt="{{ movie.Title }}" />
+    </div>
+    <mat-card-actions>
+      <button
+        (click)="getGenreDetails(movie.Genre.Name, movie.Genre.Description)"
+        mat-button
+        class="slide-fromTop"
+      >
+        Genre
+      </button>
+      <button
+        (click)="
+          getDirectorDetails(
+            movie.Director.Name,
+            movie.Director.Bio,
+            movie.Director.Birth
+          )
+        "
+        mat-button
+        class="slide-fromTop"
+      >
+        Director
+      </button>
+      <button
+        (click)="
+          getMovieSynopsis(
+            movie.Description,
+            movie.Title,
+            movie.TrailerUrl,
+            movie.ReleaseYear
+          )
+        "
+        mat-button
+        class="slide-fromTop"
+      >
+        Synopsis
+      </button>
+      <!-- <mat-icon *ngIf="!setFa">favorite_border</mat-icon> -->
+      <ng-template #favoritedMovie>
+        <div class="favoritedMovie">
+          <mat-icon (click)="deleteFavMovie(movie._id, movie.Title)"
+            >favorite</mat-icon
+          >
         </div>
-        <mat-card-actions>
-            <button
-                (click) = "getGenreDetails(movie.Genre.Name, movie.Genre.Description)"
-                mat-button
-                class="slide-fromTop"
-            >
-                Genre
-            </button>
-            <button
-                (click) = "getDirectorDetails(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)"
-                mat-button
-                class="slide-fromTop"
-            >
-                Director
-            </button>
-            <button
-                (click) = "getMovieSynopsis(movie.Description, movie.Title, movie.TrailerUrl, movie.ReleaseYear)"
-                mat-button
-                class="slide-fromTop"
-            >
-                Synopsis
-            </button>
-            <mat-icon>favorite_border</mat-icon>
-        </mat-card-actions>
-    </mat-card>            
+      </ng-template>
+      <ng-template #addToFav>
+        <div class="addToFav">
+          <mat-icon (click)="addFavMovie(movie._id, movie.Title)"
+            >favorite_border</mat-icon
+          >
+        </div>
+      </ng-template>
+    </mat-card-actions>
+  </mat-card>
 </div>
