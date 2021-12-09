@@ -17,6 +17,7 @@ export class UserProfileComponent implements OnInit {
   @Input() userData = { Username: '', Password: '', Email: '', Birthday: '' };
   movies: any[] = [];
   favMovies: any[] = [];
+  favMovieIDs: any[] = [];
   constructor(
     public fetchApiData: UserRegistrationService,
     public dialog: MatDialog,
@@ -26,6 +27,16 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.getFavMovies();
+  }
+
+  getMovies(): void {
+    this.fetchApiData.getAllMovies().subscribe((resp: any) => {
+      this.movies = resp;
+      this.movies.forEach((movie) => {
+        if (this.favMovieIDs.includes(movie._id)) this.favMovies.push(movie);
+      });
+      return this.favMovies;
+    });
   }
 
   getGenreDetails(Name: string, Description: string): void {
@@ -56,23 +67,30 @@ export class UserProfileComponent implements OnInit {
 
   getFavMovies(): void {
     const user = localStorage.getItem('username');
-    this.fetchApiData.getUser(user).subscribe((resp: any) => {
-      this.favMovies = resp.FavoriteMovies;
-      return this.favMovies;
-    });
-  }
-
-  addFavMovie(id: string, Title: string): void {
-    this.fetchApiData.addFavMovies(id).subscribe((resp: any) => {
-      this.snackBar.open(`${Title} is now added to your favorites`, 'OK', {
-        duration: 3000,
+    if (user) {
+      this.fetchApiData.getUser(user).subscribe((resp: any) => {
+        this.favMovieIDs = resp.FavoriteMovies;
+        if (this.favMovieIDs.length === 0) {
+          let noFavs = document.querySelector('.no-favs') as HTMLDivElement;
+          noFavs.innerHTML = "You don't have any favorited movies";
+        }
+        console.log(resp.FavoriteMovies);
+        return this.favMovieIDs;
       });
-      console.log(resp);
-      return this.getFavMovies();
-    });
+    }
+    setTimeout(() => {
+      this.getMovies();
+    }, 100);
   }
 
-  deleteFavMovie(id: string, Title: string): void {
+  checkForFavs() {
+    let container = document.querySelector('.container') as HTMLDivElement;
+    let noFavs = document.querySelector('.no-favs') as HTMLDivElement;
+    if (container.querySelectorAll('.faved').length < 1)
+      noFavs.innerHTML = "You don't have any favorite movies!";
+  }
+
+  deleteFavMovie(id: string, Title: string, i: number): void {
     this.fetchApiData.deleteFavMovie(id).subscribe((resp: any) => {
       this.snackBar.open(
         `${Title} has been removed from your favorites.`,
@@ -82,21 +100,14 @@ export class UserProfileComponent implements OnInit {
         }
       );
       console.log(resp);
-      let cards = document.querySelectorAll('.card');
-      let tempCards = Array.from(cards);
+      let favedMovieCards = document.querySelectorAll('.card');
+      let favUnfavCards = Array.from(favedMovieCards);
 
-      // tempCards[i].classList.remove('active');
-      // tempCards[i].classList.add('delete');
+      favUnfavCards[i].classList.remove('faved');
+      favUnfavCards[i].classList.add('unfaved');
 
-      this.checkNoFavorites();
+      this.checkForFavs();
     });
-  }
-
-  checkNoFavorites() {
-    let container = document.querySelector('.container') as HTMLDivElement;
-    let noFavorites = document.querySelector('.no-favorites') as HTMLDivElement;
-    if (container.querySelectorAll('.active').length < 1)
-      noFavorites.innerHTML = "You don't have any favorite movies!";
   }
 
   editProfile(): void {

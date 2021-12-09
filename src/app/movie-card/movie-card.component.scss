@@ -89,13 +89,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   padding: 5rem 1.5rem;
 }
-.mat-card > .addToFav > mat-icon {
-  //   position: absolute;
-  //   bottom: 0;
-}
-.mat-card > .favoritedMovie > mat-icon {
-  //   left: 0;
-}
+
 .mat-card > .addToFav > mat-icon:hover {
   transition: 0.5s;
   cursor: pointer;

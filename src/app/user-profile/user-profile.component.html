@@ -1,79 +1,129 @@
 <app-nav-bar></app-nav-bar>
-<div>
-  <mat-card class="updateContainer">
-    <mat-card-header>
-      <mat-card-title class="updateHeader">Update Profile</mat-card-title>
+<mat-card class="updateContainer">
+  <mat-card-header>
+    <mat-card-title class="updateHeader">Update Profile</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form class="formContainer">
+      <mat-form-field>
+        <mat-hint>Username must be at least 6 characters</mat-hint>
+        <input
+          matInput
+          class="input"
+          [(ngModel)]="userData.Username"
+          placeholder="username"
+          type="text"
+          name="username"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-hint>Password must be at least 6 characters</mat-hint>
+        <input
+          matInput
+          class="input"
+          [(ngModel)]="userData.Password"
+          placeholder="password"
+          type="password"
+          name="password"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          class="input"
+          [(ngModel)]="userData.Email"
+          placeholder="Email"
+          type="email"
+          name="email"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          class="input"
+          [(ngModel)]="userData.Birthday"
+          placeholder="Birthday"
+          type="date"
+          name="Birthday"
+          required
+        />
+      </mat-form-field>
+      <mat-card-actions class="updateBtn">
+        <button
+          mat-raised-button
+          (click)="editProfile()"
+          class="updateBtn"
+          color="btnColor"
+        >
+          Update Account
+        </button>
+        <button
+          mat-raised-button
+          (click)="deleteProfile()"
+          class="updateBtn"
+          color="warn"
+        >
+          Delete Account
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<h1 class="favMoviesHeader">Favorited Movies</h1>
+<h3 class="no-favs"></h3>
+<div class="container">
+  <mat-card *ngFor="let movie of favMovies; let i = index" class="card faved">
+    <mat-card-header class="card-header">
+      <mat-card-title class="card-title">{{ movie.Title }}</mat-card-title>
     </mat-card-header>
 
-    <mat-card-content>
-      <form class="formContainer">
-        <mat-form-field>
-          <mat-hint>Username must be at least 6 characters</mat-hint>
-          <input
-            matInput
-            class="input"
-            [(ngModel)]="userData.Username"
-            placeholder="username"
-            type="text"
-            name="username"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field>
-          <mat-hint>Password must be at least 6 characters</mat-hint>
-          <input
-            matInput
-            class="input"
-            [(ngModel)]="userData.Password"
-            placeholder="password"
-            type="password"
-            name="password"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field>
-          <input
-            matInput
-            class="input"
-            [(ngModel)]="userData.Email"
-            placeholder="Email"
-            type="email"
-            name="email"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field>
-          <input
-            matInput
-            class="input"
-            [(ngModel)]="userData.Birthday"
-            placeholder="Birthday"
-            type="date"
-            name="Birthday"
-            required
-          />
-        </mat-form-field>
-        <mat-card-actions class="updateBtn">
-          <button
-            mat-raised-button
-            (click)="editProfile()"
-            class="updateBtn"
-            color="btnColor"
-          >
-            Update Account
-          </button>
-          <button
-            mat-raised-button
-            (click)="deleteProfile()"
-            class="updateBtn"
-            color="warn"
-          >
-            Delete Account
-          </button>
-        </mat-card-actions>
-      </form>
-    </mat-card-content>
-  </mat-card>
+    <img src="{{ movie.Image }}" alt="{{ movie.Title }}" />
 
-  <h1 class="favMoviesHeader"></h1>
+    <mat-card-actions class="favMoviesBtns">
+      <button
+        class="slide-fromTop"
+        mat-button
+        (click)="getGenreDetails(movie.Genre.Name, movie.Genre.Description)"
+      >
+        Genre
+      </button>
+
+      <button
+        class="slide-fromTop"
+        mat-button
+        (click)="
+          getDirectorDetails(
+            movie.Director.Name,
+            movie.Director.Bio,
+            movie.Director.Birth
+          )
+        "
+      >
+        Director
+      </button>
+
+      <button
+        class="slide-fromTop"
+        mat-button
+        (click)="
+          getMovieSynopsis(
+            movie.Description,
+            movie.Title,
+            movie.TrailerUrl,
+            movie.ReleaseYear
+          )
+        "
+      >
+        Synopsis
+      </button>
+    </mat-card-actions>
+    <mat-icon (click)="deleteFavMovie(movie._id, movie.Title, i)">
+      favorite
+    </mat-icon>
+  </mat-card>
 </div>
