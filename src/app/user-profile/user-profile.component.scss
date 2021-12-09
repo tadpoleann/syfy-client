@@ -1,0 +1,25 @@
+.updateContainer {
+  margin: 6rem 2rem;
+  padding: 8rem 0;
+  background-color: #00d9ff4f;
+  border-radius: 5%;
+  box-shadow: 2px 2px 7px 0px #cfcf00;
+}
+
+.mat-card-header {
+  justify-content: center;
+}
+
+.formContainer {
+  color: azure;
+  .mat-form-field {
+    margin-right: 25px;
+    margin-top: 40px;
+  }
+}
+
+.updateBtn {
+  button {
+    margin-top: 20px;
+  }
+}

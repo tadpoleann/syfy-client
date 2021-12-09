@@ -1,76 +1,83 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    color:aliceblue;
-    background-color: #030303;
-    box-shadow: 4px 4px 5px 0px #2b2b1b;
-    height: 5rem;
-    width: 100vw;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  color: aliceblue;
+  background-color: #030303;
+  box-shadow: 4px 4px 5px 0px #2b2b1b;
+  height: 5rem;
+  width: 100vw;
 }
 .title {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0 2.2rem;
-    &:hover{
-        cursor: pointer;
-    }
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 2.2rem;
+  &:hover {
+    cursor: pointer;
+    color: #cfcf00;
+  }
 }
-button{
-    position: relative;
-    margin-right:2.2rem;
+button {
+  position: relative;
+  margin-right: 2.2rem;
 }
-button::before, button::after{
-    content:"";
-    width: 0;
-    height: 1px;
-    position: absolute;
-    transition: all 0.2s linear;
-    background: #cfcf00;
+button::before,
+button::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #cfcf00;
 }
-span::before, span::after{
-    content:"";
-    width:4px;
-    height:0;
-    position: absolute;
-    transition: all 0.2s linear;
-    background: #cfcf00;
+span::before,
+span::after {
+  content: "";
+  width: 4px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #cfcf00;
 }
-button:hover::before, button:hover::after{
-    width: 100%;
+button:hover::before,
+button:hover::after {
+  width: 100%;
 }
-button:hover span::before, button:hover span::after{
-    height: 100%;
+button:hover span::before,
+button:hover span::after {
+  height: 100%;
 }
-.outline::before{
-    left: 50%;
-    top: 0;
-    transition-duration: 0.3s;
+.outline::before {
+  left: 50%;
+  top: 0;
+  transition-duration: 0.3s;
 }
-.outline::after{
-    left: 50%;
-    bottom: 0;
-    transition-duration: 0.3s;
+.outline::after {
+  left: 50%;
+  bottom: 0;
+  transition-duration: 0.3s;
 }
-.outline span::before{
-    left: 0;
-    top: 50%;
-    transition-duration: 0.3s;
+.outline span::before {
+  left: 0;
+  top: 50%;
+  transition-duration: 0.3s;
 }
-.outline span::after{
-    right: 0;
-    top: 50%;
-    transition-duration: 0.3s;
+.outline span::after {
+  right: 0;
+  top: 50%;
+  transition-duration: 0.3s;
 }
-.outline:hover::before, .outline:hover::after{
-    left: 0;
+.outline:hover::before,
+.outline:hover::after {
+  left: 0;
 }
-.outline:hover span::before, .outline:hover span::after{
-    top: 0;
+.outline:hover span::before,
+.outline:hover span::after {
+  top: 0;
 }
-button:first-child{
-    margin-right:1rem;
+button:first-child {
+  margin-right: 1rem;
 }

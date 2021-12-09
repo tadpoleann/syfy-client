@@ -1,2 +1,79 @@
 <app-nav-bar></app-nav-bar>
+<div>
+  <mat-card class="updateContainer">
+    <mat-card-header>
+      <mat-card-title class="updateHeader">Update Profile</mat-card-title>
+    </mat-card-header>
 
+    <mat-card-content>
+      <form class="formContainer">
+        <mat-form-field>
+          <mat-hint>Username must be at least 6 characters</mat-hint>
+          <input
+            matInput
+            class="input"
+            [(ngModel)]="userData.Username"
+            placeholder="username"
+            type="text"
+            name="username"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-hint>Password must be at least 6 characters</mat-hint>
+          <input
+            matInput
+            class="input"
+            [(ngModel)]="userData.Password"
+            placeholder="password"
+            type="password"
+            name="password"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            class="input"
+            [(ngModel)]="userData.Email"
+            placeholder="Email"
+            type="email"
+            name="email"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            class="input"
+            [(ngModel)]="userData.Birthday"
+            placeholder="Birthday"
+            type="date"
+            name="Birthday"
+            required
+          />
+        </mat-form-field>
+        <mat-card-actions class="updateBtn">
+          <button
+            mat-raised-button
+            (click)="editProfile()"
+            class="updateBtn"
+            color="btnColor"
+          >
+            Update Account
+          </button>
+          <button
+            mat-raised-button
+            (click)="deleteProfile()"
+            class="updateBtn"
+            color="warn"
+          >
+            Delete Account
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <h1 class="favMoviesHeader"></h1>
+</div>

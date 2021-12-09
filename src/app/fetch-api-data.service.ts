@@ -33,10 +33,16 @@ export class UserRegistrationService {
   }
 
   // delete user profile
-  public deleteUser(userDetails: any): Observable<any> {
-    console.log(userDetails);
+  deleteProfile(): Observable<any> {
+    const token = localStorage.getItem('token');
+    const user = localStorage.getItem('username');
     return this.http
-      .delete(apiUrl + 'users/:Username', userDetails)
+      .delete(apiUrl + `users/${user}`, {
+        headers: new HttpHeaders({
+          Authorization: 'Bearer ' + token,
+        }),
+        responseType: 'text',
+      })
       .pipe(catchError(this.handleError));
   }
 
