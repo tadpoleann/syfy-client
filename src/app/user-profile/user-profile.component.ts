@@ -87,13 +87,13 @@ export class UserProfileComponent implements OnInit {
     let container = document.querySelector('.container') as HTMLDivElement;
     let noFavs = document.querySelector('.no-favs') as HTMLDivElement;
     if (container.querySelectorAll('.faved').length < 1)
-      noFavs.innerHTML = "You don't have any favorite movies!";
+      noFavs.innerHTML = "You don't have any favorite movies";
   }
 
   deleteFavMovie(id: string, Title: string, i: number): void {
     this.fetchApiData.deleteFavMovie(id).subscribe((resp: any) => {
       this.snackBar.open(
-        `${Title} has been removed from your favorites.`,
+        `${Title} has been removed from your favorites`,
         'OK',
         {
           duration: 3000,
