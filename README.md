@@ -19,10 +19,11 @@ Password: `adminpw`
 This project utilizes the MEAN stack to build the client-side component of the movie app Syfy, based on its existing [server-side code](https://github.com/tadpoleann/syfy-api). The documentation for the REST API endpoints of the server-side component are described [here](https://nameless-atoll-42754.herokuapp.com/documentation.html).
 
 <h3 id = "techStack">Tech Stack</h3>
-* MongoDB
-* Express
-* Node
-* Angular & Angular-Material
+
+- MongoDB
+- Express
+- Node
+- Angular & Angular-Material
 
 <h3 id = "features">Key Features</h3>
 
