@@ -6,7 +6,9 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError, catchError, map } from 'rxjs';
 
-//declaring api url that'll provide data for the client app
+/**
+ * declaring api url that'll provide data for the client app
+ */
 const apiUrl = 'https://nameless-atoll-42754.herokuapp.com/';
 
 @Injectable({
@@ -16,7 +18,11 @@ export class UserRegistrationService {
   // Inject the HttpClient module to the constructor params
   // This will provide HttpClient to the entire class, making it available via this.http
   constructor(private http: HttpClient) {}
-  // Making the api call for the user registration endpoint
+  /**
+   * Makes the api call for the user registration endpoint
+   * @param userDetails
+   * @returns
+   */
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http
@@ -24,7 +30,11 @@ export class UserRegistrationService {
       .pipe(catchError(this.handleError));
   }
 
-  // User login
+  /**
+   * Makes api call for user login
+   * @param userDetails
+   * @returns
+   */
   public userLogin(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http
@@ -32,7 +42,10 @@ export class UserRegistrationService {
       .pipe(catchError(this.handleError));
   }
 
-  // delete user profile
+  /**
+   * Deletes user account
+   * @returns
+   */
   deleteProfile(): Observable<any> {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('username');
@@ -46,7 +59,11 @@ export class UserRegistrationService {
       .pipe(catchError(this.handleError));
   }
 
-  // get user profile
+  /**
+   * Fetch single users details
+   * @param username required
+   * @returns user details
+   */
   getUser(username: any): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http
@@ -58,7 +75,11 @@ export class UserRegistrationService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  // edit user profile
+  /**
+   * Update user details
+   * @param userDetails fetched from input form
+   * @returns updated user details
+   */
   editProfile(userDetails: any): Observable<any> {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('username');
@@ -75,6 +96,7 @@ export class UserRegistrationService {
    * Making an API call to get the list of all movies
    * calls the /movies endpoint
    * get all movies
+   * @returns all movies
    */
   getAllMovies(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -102,7 +124,11 @@ export class UserRegistrationService {
       .pipe(catchError(this.handleError));
   }
 
-  //add fav movie
+  /**
+   * Adds movie to user's favorites list
+   * @param id - movie ID
+   * @returns movie added to favorites
+   */
   addFavMovies(id: string): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('username');
@@ -115,7 +141,11 @@ export class UserRegistrationService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  // delete fav movie
+  /**
+   * deletes movie from favorites list
+   * @param id - movie ID
+   * @returns movie deleted from favorites
+   */
   deleteFavMovie(id: string): Observable<any> {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('username');
