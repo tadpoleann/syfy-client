@@ -24,11 +24,16 @@ export class UserProfileComponent implements OnInit {
     public snackBar: MatSnackBar,
     public router: Router
   ) {}
-
+  /**
+   * calls function on page load to retrieve user's favorite movies
+   */
   ngOnInit(): void {
     this.getFavMovies();
   }
-
+  /**
+   * Function that retrieves list of all moves from the database
+   * @returns movies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -38,21 +43,36 @@ export class UserProfileComponent implements OnInit {
       return this.favMovies;
     });
   }
-
+  /**
+   * function that opens dialog describing genre of the movie
+   * @param  {string} Name - Name of the genre
+   * @param  {string} Description - Description of the genre
+   */
   getGenreDetails(Name: string, Description: string): void {
     this.dialog.open(MovieGenreComponent, {
       data: { Name, Description },
       width: '450px',
     });
   }
-
+  /**
+   * Function to open dialog that shows director details
+   * @param  {string} Name - Name of the director
+   * @param  {string} Bio - Director's Biography
+   * @param  {string} Birth - Director's birthday
+   */
   getDirectorDetails(Name: string, Bio: string, Birth: string): void {
     this.dialog.open(MovieDirectorComponent, {
       data: { Name, Bio, Birth },
       width: '450px',
     });
   }
-
+  /**
+   * Function that opens dialog showing movie's details
+   * @param  {string} Description - Movie description
+   * @param  {string} Title - Movie title
+   * @param  {string} TrailerUrl - Movie trailer url
+   * @param  {number} ReleaseYear - Movie's release year
+   */
   getMovieSynopsis(
     Description: string,
     Title: string,
@@ -65,6 +85,10 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * function that gets user's favorite movies
+   * @returns favMovieIDs -IDs of user's favorite momvies
+   */
   getFavMovies(): void {
     const user = localStorage.getItem('username');
     if (user) {
@@ -83,6 +107,10 @@ export class UserProfileComponent implements OnInit {
     }, 100);
   }
 
+  /**
+   * checks if user no longer has favorite movies after deleting a movie
+   * if not, then text will display showing that user doesn't have any favs
+   */
   checkForFavs() {
     let container = document.querySelector('.container') as HTMLDivElement;
     let noFavs = document.querySelector('.no-favs') as HTMLDivElement;
@@ -90,6 +118,12 @@ export class UserProfileComponent implements OnInit {
       noFavs.innerHTML = "You don't have any favorite movies";
   }
 
+  /**
+   * deletes a movie from user's list of favorites
+   * @param  {string} id - ID of movie to be deleted from favs
+   * @param  {string} Title - Title of movie to be deleted from favs
+   * @param  {number} i - index of movie in favMovies
+   */
   deleteFavMovie(id: string, Title: string, i: number): void {
     this.fetchApiData.deleteFavMovie(id).subscribe((resp: any) => {
       this.snackBar.open(
@@ -109,7 +143,9 @@ export class UserProfileComponent implements OnInit {
       this.checkForFavs();
     });
   }
-
+  /**
+   * function that updates user's profile information
+   */
   editProfile(): void {
     this.fetchApiData.editProfile(this.userData).subscribe(
       (result) => {
@@ -127,7 +163,9 @@ export class UserProfileComponent implements OnInit {
     localStorage.clear();
     this.router.navigate(['welcome']);
   }
-
+  /**
+   * function that deletes a user's account
+   */
   deleteProfile(): void {
     this.fetchApiData.deleteProfile().subscribe(
       (result) => {
