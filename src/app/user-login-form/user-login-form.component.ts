@@ -23,17 +23,20 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /**
+   * Function that checks user's login credentials with login data in server
+   * Token gets sent back if credentials are valid
+   * username and token gets stored in localStorage for later usage
+   */
   userLogin(): void {
     this.isLoading = true;
     this.fetchApiData.userLogin(this.userData).subscribe(
       (response) => {
         // close when user successfully logins
         this.dialogRef.close();
-        // username and pw
         localStorage.setItem('username', this.userData.Username);
         localStorage.setItem('token', response.token);
         this.isLoading = false;
-        // ..
         this.snackBar.open('Welcome back!', this.userData.Username, {
           duration: 3000,
         });
