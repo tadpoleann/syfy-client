@@ -1,6 +1,6 @@
 // src/app/movie-card/movie-card.component.ts
-import { Component, OnInit } from '@angular/core';
-import { UserRegistrationService } from '../fetch-api-data.service';
+import { Component } from '@angular/core';
+import { FetchApiDataService } from '../fetch-api-data.service';
 //angular material
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -18,7 +18,7 @@ export class MovieCardComponent {
   movies: any[] = [];
   favMovies: any[] = [];
   constructor(
-    public fetchApiData: UserRegistrationService,
+    public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
     public snackBar: MatSnackBar
   ) {}
