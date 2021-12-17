@@ -23,11 +23,19 @@ export class MovieCardComponent {
     public snackBar: MatSnackBar
   ) {}
 
+  /**
+   * calls function on page load to retrieve all movies in the database
+   * and retrieves user's favorite movies
+   */
   ngOnInit(): void {
     this.getMovies();
     this.getFavMovies();
   }
 
+  /**
+   * Function that retrieves list of all moves from the database
+   * @returns movies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       //fetch all movies from api
@@ -36,21 +44,36 @@ export class MovieCardComponent {
       return this.movies;
     });
   }
-
+  /**
+   * function that opens dialog describing genre of the movie
+   * @param  {string} Name - Name of the genre
+   * @param  {string} Description - Description of the genre
+   */
   getGenreDetails(Name: string, Description: string): void {
     this.dialog.open(MovieGenreComponent, {
       data: { Name, Description },
       width: '450px',
     });
   }
-
+  /**
+   * Function to open dialog that shows director details
+   * @param  {string} Name - Name of the director
+   * @param  {string} Bio - Director's Biography
+   * @param  {string} Birth - Director's birthday
+   */
   getDirectorDetails(Name: string, Bio: string, Birth: string): void {
     this.dialog.open(MovieDirectorComponent, {
       data: { Name, Bio, Birth },
       width: '450px',
     });
   }
-
+  /**
+   * Function that opens dialog showing movie's details
+   * @param  {string} Description - Movie description
+   * @param  {string} Title - Movie title
+   * @param  {string} TrailerUrl - Movie trailer url
+   * @param  {number} ReleaseYear - Movie's release year
+   */
   getMovieSynopsis(
     Description: string,
     Title: string,
@@ -63,6 +86,10 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * Function to get user's favorite movies
+   * @returns favMovies - the IDs of a user's favorite movies
+   */
   getFavMovies(): void {
     const user = localStorage.getItem('username');
     this.fetchApiData.getUser(user).subscribe((resp: any) => {
@@ -71,6 +98,11 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * Function that adds a movie to a user's list of favorites
+   * @param  {string} id - Movie ID
+   * @param  {string} Title - Movie title
+   */
   addFavMovie(id: string, Title: string): void {
     this.fetchApiData.addFavMovies(id).subscribe((resp: any) => {
       this.snackBar.open(`${Title} is now added to your favorites`, 'OK', {
@@ -80,7 +112,11 @@ export class MovieCardComponent {
       return this.getFavMovies();
     });
   }
-
+  /**
+   * function that deletes a movie from a user's list of favorites
+   * @param  {string} id - id of movie to be deleted from user's favorites
+   * @param  {string} Title - title of movie to be deleted from user's favorites
+   */
   deleteFavMovie(id: string, Title: string): void {
     this.fetchApiData.deleteFavMovie(id).subscribe((resp: any) => {
       this.snackBar.open(
