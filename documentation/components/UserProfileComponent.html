@@ -1,0 +1,1827 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>syfy-client documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">syfy-client documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  UserProfileComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/user-profile/user-profile.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user-profile</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-profile.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-profile.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                <a href="#favMovieIDs" >favMovieIDs</a>
+                            </li>
+                            <li>
+                                <a href="#favMovies" >favMovies</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#fetchApiData" >fetchApiData</a>
+                            </li>
+                            <li>
+                                <a href="#movies" >movies</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#router" >router</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#snackBar" >snackBar</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checkForFavs" >checkForFavs</a>
+                            </li>
+                            <li>
+                                <a href="#deleteFavMovie" >deleteFavMovie</a>
+                            </li>
+                            <li>
+                                <a href="#deleteProfile" >deleteProfile</a>
+                            </li>
+                            <li>
+                                <a href="#editProfile" >editProfile</a>
+                            </li>
+                            <li>
+                                <a href="#getDirectorDetails" >getDirectorDetails</a>
+                            </li>
+                            <li>
+                                <a href="#getFavMovies" >getFavMovies</a>
+                            </li>
+                            <li>
+                                <a href="#getGenreDetails" >getGenreDetails</a>
+                            </li>
+                            <li>
+                                <a href="#getMovies" >getMovies</a>
+                            </li>
+                            <li>
+                                <a href="#getMovieSynopsis" >getMovieSynopsis</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#userData" >userData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fetchApiData: <a href="../injectables/FetchApiDataService.html" target="_self">FetchApiDataService</a>, dialog: MatDialog, snackBar: MatSnackBar, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/user-profile/user-profile.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fetchApiData</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FetchApiDataService.html" target="_self" >FetchApiDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userData"></a>
+                        <b>userData</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>{ Username: string; Password: string; Email: string; Birthday: string; }</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ Username: &#x27;&#x27;, Password: &#x27;&#x27;, Email: &#x27;&#x27;, Birthday: &#x27;&#x27; }</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/user-profile/user-profile.component.ts:17</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkForFavs"></a>
+                    <span class="name">
+                        <span ><b>checkForFavs</b></span>
+                        <a href="#checkForFavs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkForFavs()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>checks if user no longer has favorite movies after deleting a movie
+if not, then text will display showing that user doesn&#39;t have any favs</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFavMovie"></a>
+                    <span class="name">
+                        <span ><b>deleteFavMovie</b></span>
+                        <a href="#deleteFavMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteFavMovie(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, i: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>deletes a movie from user&#39;s list of favorites</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>ID of movie to be deleted from favs</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Title</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Title of movie to be deleted from favs</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>i</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>index of movie in favMovies</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteProfile"></a>
+                    <span class="name">
+                        <span ><b>deleteProfile</b></span>
+                        <a href="#deleteProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteProfile()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="169"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:169</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>function that deletes a user&#39;s account</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editProfile"></a>
+                    <span class="name">
+                        <span ><b>editProfile</b></span>
+                        <a href="#editProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editProfile()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>function that updates user&#39;s profile information</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDirectorDetails"></a>
+                    <span class="name">
+                        <span ><b>getDirectorDetails</b></span>
+                        <a href="#getDirectorDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDirectorDetails(Name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Bio: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Birth: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function to open dialog that shows director details</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Name of the director</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bio</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Director&#39;s Biography</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Birth</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Director&#39;s birthday</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFavMovies"></a>
+                    <span class="name">
+                        <span ><b>getFavMovies</b></span>
+                        <a href="#getFavMovies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFavMovies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>function that gets user&#39;s favorite movies</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>favMovieIDs -IDs of user&#39;s favorite momvies</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getGenreDetails"></a>
+                    <span class="name">
+                        <span ><b>getGenreDetails</b></span>
+                        <a href="#getGenreDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getGenreDetails(Name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Description: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>function that opens dialog describing genre of the movie</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Name of the genre</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Description of the genre</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMovies"></a>
+                    <span class="name">
+                        <span ><b>getMovies</b></span>
+                        <a href="#getMovies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMovies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function that retrieves list of all moves from the database</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>movies</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMovieSynopsis"></a>
+                    <span class="name">
+                        <span ><b>getMovieSynopsis</b></span>
+                        <a href="#getMovieSynopsis"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMovieSynopsis(Description: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, Title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, TrailerUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, ReleaseYear: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function that opens dialog showing movie&#39;s details</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Description</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Movie description</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Title</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Movie title</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TrailerUrl</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Movie trailer url</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ReleaseYear</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Movie&#39;s release year</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/user-profile/user-profile.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>calls function on page load to retrieve user&#39;s favorite movies</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/user-profile/user-profile.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="favMovieIDs"></a>
+                    <span class="name">
+                        <span ><b>favMovieIDs</b></span>
+                        <a href="#favMovieIDs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/user-profile/user-profile.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="favMovies"></a>
+                    <span class="name">
+                        <span ><b>favMovies</b></span>
+                        <a href="#favMovies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/user-profile/user-profile.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchApiData"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>fetchApiData</b></span>
+                        <a href="#fetchApiData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/FetchApiDataService.html" target="_self" >FetchApiDataService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/user-profile/user-profile.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="movies"></a>
+                    <span class="name">
+                        <span ><b>movies</b></span>
+                        <a href="#movies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/user-profile/user-profile.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/user-profile/user-profile.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="snackBar"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>snackBar</b></span>
+                        <a href="#snackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>MatSnackBar</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/user-profile/user-profile.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+import { FetchApiDataService } from &#x27;../fetch-api-data.service&#x27;;
+//angular material
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { MatSnackBar } from &#x27;@angular/material/snack-bar&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+//components
+import { MovieGenreComponent } from &#x27;../movie-genre/movie-genre.component&#x27;;
+import { MovieDirectorComponent } from &#x27;../movie-director/movie-director.component&#x27;;
+import { MovieSynopsisComponent } from &#x27;../movie-synopsis/movie-synopsis.component&#x27;;
+@Component({
+  selector: &#x27;app-user-profile&#x27;,
+  templateUrl: &#x27;./user-profile.component.html&#x27;,
+  styleUrls: [&#x27;./user-profile.component.scss&#x27;],
+})
+export class UserProfileComponent implements OnInit {
+  @Input() userData &#x3D; { Username: &#x27;&#x27;, Password: &#x27;&#x27;, Email: &#x27;&#x27;, Birthday: &#x27;&#x27; };
+  movies: any[] &#x3D; [];
+  favMovies: any[] &#x3D; [];
+  favMovieIDs: any[] &#x3D; [];
+  constructor(
+    public fetchApiData: FetchApiDataService,
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar,
+    public router: Router
+  ) {}
+  /**
+   * calls function on page load to retrieve user&#x27;s favorite movies
+   */
+  ngOnInit(): void {
+    this.getFavMovies();
+  }
+  /**
+   * Function that retrieves list of all moves from the database
+   * @returns movies
+   */
+  getMovies(): void {
+    this.fetchApiData.getAllMovies().subscribe((resp: any) &#x3D;&gt; {
+      this.movies &#x3D; resp;
+      this.movies.forEach((movie) &#x3D;&gt; {
+        if (this.favMovieIDs.includes(movie._id)) this.favMovies.push(movie);
+      });
+      return this.favMovies;
+    });
+  }
+  /**
+   * function that opens dialog describing genre of the movie
+   * @param  {string} Name - Name of the genre
+   * @param  {string} Description - Description of the genre
+   */
+  getGenreDetails(Name: string, Description: string): void {
+    this.dialog.open(MovieGenreComponent, {
+      data: { Name, Description },
+      width: &#x27;450px&#x27;,
+    });
+  }
+  /**
+   * Function to open dialog that shows director details
+   * @param  {string} Name - Name of the director
+   * @param  {string} Bio - Director&#x27;s Biography
+   * @param  {string} Birth - Director&#x27;s birthday
+   */
+  getDirectorDetails(Name: string, Bio: string, Birth: string): void {
+    this.dialog.open(MovieDirectorComponent, {
+      data: { Name, Bio, Birth },
+      width: &#x27;450px&#x27;,
+    });
+  }
+  /**
+   * Function that opens dialog showing movie&#x27;s details
+   * @param  {string} Description - Movie description
+   * @param  {string} Title - Movie title
+   * @param  {string} TrailerUrl - Movie trailer url
+   * @param  {number} ReleaseYear - Movie&#x27;s release year
+   */
+  getMovieSynopsis(
+    Description: string,
+    Title: string,
+    TrailerUrl: string,
+    ReleaseYear: number
+  ): void {
+    this.dialog.open(MovieSynopsisComponent, {
+      data: { Description, Title, TrailerUrl, ReleaseYear },
+      width: &#x27;500px&#x27;,
+    });
+  }
+
+  /**
+   * function that gets user&#x27;s favorite movies
+   * @returns favMovieIDs -IDs of user&#x27;s favorite momvies
+   */
+  getFavMovies(): void {
+    const user &#x3D; localStorage.getItem(&#x27;username&#x27;);
+    if (user) {
+      this.fetchApiData.getUser(user).subscribe((resp: any) &#x3D;&gt; {
+        this.favMovieIDs &#x3D; resp.FavoriteMovies;
+        if (this.favMovieIDs.length &#x3D;&#x3D;&#x3D; 0) {
+          let noFavs &#x3D; document.querySelector(&#x27;.no-favs&#x27;) as HTMLDivElement;
+          noFavs.innerHTML &#x3D; &quot;You don&#x27;t have any favorited movies&quot;;
+        }
+        console.log(resp.FavoriteMovies);
+        return this.favMovieIDs;
+      });
+    }
+    setTimeout(() &#x3D;&gt; {
+      this.getMovies();
+    }, 100);
+  }
+
+  /**
+   * checks if user no longer has favorite movies after deleting a movie
+   * if not, then text will display showing that user doesn&#x27;t have any favs
+   */
+  checkForFavs() {
+    let container &#x3D; document.querySelector(&#x27;.container&#x27;) as HTMLDivElement;
+    let noFavs &#x3D; document.querySelector(&#x27;.no-favs&#x27;) as HTMLDivElement;
+    if (container.querySelectorAll(&#x27;.faved&#x27;).length &lt; 1)
+      noFavs.innerHTML &#x3D; &quot;You don&#x27;t have any favorite movies&quot;;
+  }
+
+  /**
+   * deletes a movie from user&#x27;s list of favorites
+   * @param  {string} id - ID of movie to be deleted from favs
+   * @param  {string} Title - Title of movie to be deleted from favs
+   * @param  {number} i - index of movie in favMovies
+   */
+  deleteFavMovie(id: string, Title: string, i: number): void {
+    this.fetchApiData.deleteFavMovie(id).subscribe((resp: any) &#x3D;&gt; {
+      this.snackBar.open(
+        &#x60;${Title} has been removed from your favorites&#x60;,
+        &#x27;OK&#x27;,
+        {
+          duration: 3000,
+        }
+      );
+      console.log(resp);
+      let favedMovieCards &#x3D; document.querySelectorAll(&#x27;.card&#x27;);
+      let favUnfavCards &#x3D; Array.from(favedMovieCards);
+
+      favUnfavCards[i].classList.remove(&#x27;faved&#x27;);
+      favUnfavCards[i].classList.add(&#x27;unfaved&#x27;);
+
+      this.checkForFavs();
+    });
+  }
+  /**
+   * function that updates user&#x27;s profile information
+   */
+  editProfile(): void {
+    this.fetchApiData.editProfile(this.userData).subscribe(
+      (result) &#x3D;&gt; {
+        console.log(result);
+        this.snackBar.open(&#x27;Profile has been updated&#x27;, &#x27;OK&#x27;, {
+          duration: 3000,
+        });
+      },
+      (result) &#x3D;&gt; {
+        this.snackBar.open(result, &#x27;ok&#x27;, {
+          duration: 3000,
+        });
+      }
+    );
+    localStorage.clear();
+    this.router.navigate([&#x27;welcome&#x27;]);
+  }
+  /**
+   * function that deletes a user&#x27;s account
+   */
+  deleteProfile(): void {
+    this.fetchApiData.deleteProfile().subscribe(
+      (result) &#x3D;&gt; {
+        console.log(result);
+        this.snackBar.open(&#x27;Your account has been deleted.&#x27;, &#x27;OK&#x27;, {
+          duration: 3000,
+        });
+      },
+      (result) &#x3D;&gt; {
+        this.snackBar.open(result, &#x27;OK&#x27;, {
+          duration: 3000,
+        });
+      }
+    );
+    localStorage.clear();
+    this.router.navigate([&#x27;welcome&#x27;]);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-nav-bar&gt;&lt;/app-nav-bar&gt;
+&lt;mat-card class&#x3D;&quot;updateContainer&quot;&gt;
+  &lt;mat-card-header&gt;
+    &lt;mat-card-title class&#x3D;&quot;updateHeader&quot;&gt;Update Profile&lt;/mat-card-title&gt;
+  &lt;/mat-card-header&gt;
+
+  &lt;mat-card-content&gt;
+    &lt;form class&#x3D;&quot;formContainer&quot;&gt;
+      &lt;mat-form-field&gt;
+        &lt;mat-hint&gt;Username must be at least 6 characters&lt;/mat-hint&gt;
+        &lt;input
+          matInput
+          class&#x3D;&quot;input&quot;
+          [(ngModel)]&#x3D;&quot;userData.Username&quot;
+          placeholder&#x3D;&quot;username&quot;
+          type&#x3D;&quot;text&quot;
+          name&#x3D;&quot;username&quot;
+          required
+        /&gt;
+      &lt;/mat-form-field&gt;
+      &lt;mat-form-field&gt;
+        &lt;mat-hint&gt;Password must be at least 6 characters&lt;/mat-hint&gt;
+        &lt;input
+          matInput
+          class&#x3D;&quot;input&quot;
+          [(ngModel)]&#x3D;&quot;userData.Password&quot;
+          placeholder&#x3D;&quot;password&quot;
+          type&#x3D;&quot;password&quot;
+          name&#x3D;&quot;password&quot;
+          required
+        /&gt;
+      &lt;/mat-form-field&gt;
+      &lt;mat-form-field&gt;
+        &lt;input
+          matInput
+          class&#x3D;&quot;input&quot;
+          [(ngModel)]&#x3D;&quot;userData.Email&quot;
+          placeholder&#x3D;&quot;Email&quot;
+          type&#x3D;&quot;email&quot;
+          name&#x3D;&quot;email&quot;
+          required
+        /&gt;
+      &lt;/mat-form-field&gt;
+      &lt;mat-form-field&gt;
+        &lt;input
+          matInput
+          class&#x3D;&quot;input&quot;
+          [(ngModel)]&#x3D;&quot;userData.Birthday&quot;
+          placeholder&#x3D;&quot;Birthday&quot;
+          type&#x3D;&quot;date&quot;
+          name&#x3D;&quot;Birthday&quot;
+          required
+        /&gt;
+      &lt;/mat-form-field&gt;
+      &lt;mat-card-actions class&#x3D;&quot;updateBtn&quot;&gt;
+        &lt;button
+          mat-raised-button
+          (click)&#x3D;&quot;editProfile()&quot;
+          class&#x3D;&quot;updateBtn&quot;
+          color&#x3D;&quot;btnColor&quot;
+        &gt;
+          Update Account
+        &lt;/button&gt;
+        &lt;button
+          mat-raised-button
+          (click)&#x3D;&quot;deleteProfile()&quot;
+          class&#x3D;&quot;updateBtn&quot;
+          color&#x3D;&quot;warn&quot;
+        &gt;
+          Delete Account
+        &lt;/button&gt;
+      &lt;/mat-card-actions&gt;
+    &lt;/form&gt;
+  &lt;/mat-card-content&gt;
+&lt;/mat-card&gt;
+
+&lt;h1 class&#x3D;&quot;favMoviesHeader&quot;&gt;Favorited Movies&lt;/h1&gt;
+&lt;h3 class&#x3D;&quot;no-favs&quot;&gt;&lt;/h3&gt;
+&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;mat-card *ngFor&#x3D;&quot;let movie of favMovies; let i &#x3D; index&quot; class&#x3D;&quot;card faved&quot;&gt;
+    &lt;mat-card-header class&#x3D;&quot;card-header&quot;&gt;
+      &lt;mat-card-title class&#x3D;&quot;card-title&quot;&gt;{{ movie.Title }}&lt;/mat-card-title&gt;
+    &lt;/mat-card-header&gt;
+
+    &lt;img src&#x3D;&quot;{{ movie.Image }}&quot; alt&#x3D;&quot;{{ movie.Title }}&quot; /&gt;
+
+    &lt;mat-card-actions class&#x3D;&quot;favMoviesBtns&quot;&gt;
+      &lt;button
+        class&#x3D;&quot;slide-fromTop&quot;
+        mat-button
+        (click)&#x3D;&quot;getGenreDetails(movie.Genre.Name, movie.Genre.Description)&quot;
+      &gt;
+        Genre
+      &lt;/button&gt;
+
+      &lt;button
+        class&#x3D;&quot;slide-fromTop&quot;
+        mat-button
+        (click)&#x3D;&quot;
+          getDirectorDetails(
+            movie.Director.Name,
+            movie.Director.Bio,
+            movie.Director.Birth
+          )
+        &quot;
+      &gt;
+        Director
+      &lt;/button&gt;
+
+      &lt;button
+        class&#x3D;&quot;slide-fromTop&quot;
+        mat-button
+        (click)&#x3D;&quot;
+          getMovieSynopsis(
+            movie.Description,
+            movie.Title,
+            movie.TrailerUrl,
+            movie.ReleaseYear
+          )
+        &quot;
+      &gt;
+        Synopsis
+      &lt;/button&gt;
+    &lt;/mat-card-actions&gt;
+    &lt;mat-icon (click)&#x3D;&quot;deleteFavMovie(movie._id, movie.Title, i)&quot;&gt;
+      favorite
+    &lt;/mat-icon&gt;
+  &lt;/mat-card&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./user-profile.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.updateContainer {
+  margin: 6rem 2rem;
+  padding: 8rem 1rem;
+  background-color: #00d9ff4f;
+  border-radius: 5%;
+  box-shadow: 2px 2px 7px 0px #cfcf00;
+}
+
+.mat-card-header {
+  justify-content: center;
+}
+
+.card {
+  margin: 0.5rem;
+}
+
+.formContainer {
+  color: azure;
+  .mat-form-field {
+    margin-right: 25px;
+    margin-top: 40px;
+  }
+}
+
+.updateBtn {
+  button {
+    margin-top: 20px;
+  }
+}
+
+.favMoviesHeader {
+  color: azure;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+.no-favs {
+  text-align: center;
+  color: #cfcf00;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 4rem 2rem;
+}
+
+.card-title {
+  font-size: 24px;
+  padding: 5px;
+  color: azure;
+}
+.favMoviesBtns {
+  button {
+    margin: 0 0.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+.favMoviesBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    border-radius: 0;
+    margin: 0;
+    background: transparent;
+    color: aliceblue;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all 0.7s ease-in;
+    -moz-transition: all 0.7s ease-in;
+    -ms-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
+    overflow: hidden;
+
+    &amp;:after {
+      position: absolute;
+      content: &quot;&quot;;
+      background: #cfcf00;
+      z-index: -1;
+      -webkit-transition: all 0.29s ease-out;
+      -moz-transition: all 0.29s ease-out;
+      -ms-transition: all 0.29s ease-out;
+      -o-transition: all 0.29s ease-out;
+      transition: all 0.29s ease-out;
+      opacity: 0;
+    }
+    &amp;:hover {
+      color: rgba(15, 15, 15, 1);
+      &amp;:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+.slide-fromTop {
+  &amp;:after {
+    width: 100%;
+    height: 1%;
+    left: 0;
+    top: 0;
+  }
+  &amp;:hover:after {
+    height: 100%;
+  }
+}
+
+.mat-icon {
+  color: #cfcf00;
+  font-size: 2rem;
+}
+.card &gt; mat-icon:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+img {
+  max-height: 400px;
+  max-width: 270px;
+}
+
+.unfaved {
+  display: none;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-nav-bar></app-nav-bar><mat-card class="updateContainer">  <mat-card-header>    <mat-card-title class="updateHeader">Update Profile</mat-card-title>  </mat-card-header>  <mat-card-content>    <form class="formContainer">      <mat-form-field>        <mat-hint>Username must be at least 6 characters</mat-hint>        <input          matInput          class="input"          [(ngModel)]="userData.Username"          placeholder="username"          type="text"          name="username"          required        />      </mat-form-field>      <mat-form-field>        <mat-hint>Password must be at least 6 characters</mat-hint>        <input          matInput          class="input"          [(ngModel)]="userData.Password"          placeholder="password"          type="password"          name="password"          required        />      </mat-form-field>      <mat-form-field>        <input          matInput          class="input"          [(ngModel)]="userData.Email"          placeholder="Email"          type="email"          name="email"          required        />      </mat-form-field>      <mat-form-field>        <input          matInput          class="input"          [(ngModel)]="userData.Birthday"          placeholder="Birthday"          type="date"          name="Birthday"          required        />      </mat-form-field>      <mat-card-actions class="updateBtn">        <button          mat-raised-button          (click)="editProfile()"          class="updateBtn"          color="btnColor"        >          Update Account        </button>        <button          mat-raised-button          (click)="deleteProfile()"          class="updateBtn"          color="warn"        >          Delete Account        </button>      </mat-card-actions>    </form>  </mat-card-content></mat-card><h1 class="favMoviesHeader">Favorited Movies</h1><h3 class="no-favs"></h3><div class="container">  <mat-card *ngFor="let movie of favMovies; let i = index" class="card faved">    <mat-card-header class="card-header">      <mat-card-title class="card-title">{{ movie.Title }}</mat-card-title>    </mat-card-header>    <img src="{{ movie.Image }}" alt="{{ movie.Title }}" />    <mat-card-actions class="favMoviesBtns">      <button        class="slide-fromTop"        mat-button        (click)="getGenreDetails(movie.Genre.Name, movie.Genre.Description)"      >        Genre      </button>      <button        class="slide-fromTop"        mat-button        (click)="          getDirectorDetails(            movie.Director.Name,            movie.Director.Bio,            movie.Director.Birth          )        "      >        Director      </button>      <button        class="slide-fromTop"        mat-button        (click)="          getMovieSynopsis(            movie.Description,            movie.Title,            movie.TrailerUrl,            movie.ReleaseYear          )        "      >        Synopsis      </button>    </mat-card-actions>    <mat-icon (click)="deleteFavMovie(movie._id, movie.Title, i)">      favorite    </mat-icon>  </mat-card></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'MovieCardComponent', 'selector': 'app-movie-card'},{'name': 'MovieDirectorComponent', 'selector': 'app-movie-director'},{'name': 'MovieGenreComponent', 'selector': 'app-movie-genre'},{'name': 'MovieSynopsisComponent', 'selector': 'app-movie-synopsis'},{'name': 'NavBarComponent', 'selector': 'app-nav-bar'},{'name': 'UserLoginFormComponent', 'selector': 'app-user-login-form'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRegistrationFormComponent', 'selector': 'app-user-registration-form'},{'name': 'WelcomePageComponent', 'selector': 'app-welcome-page'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UserProfileComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserProfileComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
