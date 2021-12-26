@@ -2,6 +2,8 @@
 
 <h3> Live Demo </h3>
 
+https://vimeo.com/manage/videos/658954232
+
 [Click to see live demo](https://tadpoleann.github.io/syfy-client/welcome)
 
 #### Use these credentials to login
