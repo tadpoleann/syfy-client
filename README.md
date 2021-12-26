@@ -1,8 +1,10 @@
 # SyfyClient
 
-<h3> Live Demo </h3>
+<h3>Demo</h3>
 
-[Click to see live demo](https://tadpoleann.github.io/syfy-client/welcome)
+<h3>Live Preview</h3>
+
+[Click to see live preview](https://tadpoleann.github.io/syfy-client/welcome)
 
 #### Use these credentials to login
 
