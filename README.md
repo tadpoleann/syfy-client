@@ -2,6 +2,8 @@
 
 <h3>Demo</h3>
 
+https://user-images.githubusercontent.com/94260284/147399407-bd83775d-4ec9-40f2-ab9d-323f3cd4bd5f.mp4
+
 <h3>Live Preview</h3>
 
 [Click to see live preview](https://tadpoleann.github.io/syfy-client/welcome)
